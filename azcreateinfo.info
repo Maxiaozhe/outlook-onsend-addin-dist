@@ -1,0 +1,24 @@
+az webapp up --location eastasia --name outlook-onsend-site --html
+webapp outlook-onsend-site doesn't exist
+Creating Resource group 'xiaozhe_ma_rg_Windows_eastasia' ...
+Resource group creation complete
+Creating AppServicePlan 'xiaozhe_ma_asp_Windows_eastasia_0' ...
+Creating webapp 'outlook-onsend-site' ...
+Configuring default logging for the app, if not already enabled
+Creating zip with contents of dir /home/xiaozhe_ma/quickstart/outlook-onsend-addin-dist ...
+Getting scm site credentials for zip deployment
+Starting zip deployment. This operation can take a while to complete ...
+Deployment endpoint responded with status code 202
+You can launch the app at http://outlook-onsend-site.azurewebsites.net
+{
+  "URL": "http://outlook-onsend-site.azurewebsites.net",
+  "appserviceplan": "xiaozhe_ma_asp_Windows_eastasia_0",
+  "location": "eastasia",
+  "name": "outlook-onsend-site",
+  "os": "Windows",
+  "resourcegroup": "xiaozhe_ma_rg_Windows_eastasia",
+  "runtime_version": "-",
+  "runtime_version_detected": "-",
+  "sku": "FREE",
+  "src_path": "//home//xiaozhe_ma//quickstart//outlook-onsend-addin-dist"
+}
