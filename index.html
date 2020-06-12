@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outlook 送信チェックアドイン</title>
+    <script>
+    function copyurl(link){
+        let text =link.innerText;
+        let data = [new ClipboardItem({ "text/plain": new Blob([text], { type: "text/plain" }) })];
+        navigator.clipboard.write(data).then(function(){
+            console.log("copy successed!");
+        },function(){
+            console.log("copy failed!");
+        });
+    }
+    </script>
 </head>
 <body>
     <h1>Outlook 送信チェックアドイン</h1>
     <img src="./assets/addin-logo-filled.png" />
-    マニフェストURL：<a href="./manifest.xml">manifest.xml</a>
+    マニフェストURL：<a onclick="copyurl(this);" href="#">https://outlook-onsend-site.azurewebsites.net/manifest.xml</a>
 </body>
 </html>
